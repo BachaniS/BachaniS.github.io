@@ -1,0 +1,241 @@
+.app {
+  background-color: #141414;
+}
+
+/* NAVBAR */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  height: 70px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.nav__black {
+  background-color: #141414;
+}
+
+.nav__logo {
+  color: #e50914;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav__links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav__link:hover {
+  color: #b3b3b3;
+}
+
+/* BANNER */
+.banner {
+  color: white;
+  object-fit: contain;
+  height: 70vh;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.banner__contents {
+  margin-left: 40px;
+  padding-top: 140px;
+  height: 190px;
+  z-index: 2;
+  position: relative;
+}
+
+.banner__title {
+  font-size: 4rem;
+  font-weight: 800;
+  padding-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.banner__description {
+  width: 45rem;
+  line-height: 1.4;
+  padding-top: 1rem;
+  font-size: 1.3rem;
+  max-width: 600px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.banner__buttons {
+  margin-top: 2rem;
+}
+
+.banner__button {
+  cursor: pointer;
+  color: black;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0.6rem 2.2rem;
+  margin-right: 1rem;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+
+.banner__button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.banner__button--dark {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: white;
+}
+.banner__button--dark:hover {
+  background-color: rgba(109, 109, 110, 0.4);
+  color: white;
+}
+
+.banner--fadeBottom {
+  height: 15rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37,37,37,0.61),
+    #141414
+  );
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ROW */
+.row {
+  color: white;
+  margin-left: 40px;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 5;
+}
+
+.row > h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.row__poster {
+  min-width: 300px;
+  height: 170px;
+  background: linear-gradient(135deg, #1f1f1f 0%, #3a3a3a 100%);
+  border-radius: 6px;
+  transition: transform 450ms;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Slightly different gradient sizes/patterns */
+.row__poster:nth-child(odd) {
+  background: linear-gradient(135deg, #2c1a1a 0%, #4a2a2a 100%);
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+  z-index: 10;
+}
+
+.row__posterLarge {
+  min-width: 250px;
+  height: 350px;
+}
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
+
+.poster__info {
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  opacity: 1;
+}
+
+.poster__title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.poster__desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.poster__tech {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.tech__badge {
+  font-size: 0.75rem;
+  background-color: #e50914;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Extra decorative touches */
+.poster__linkIcon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: white;
+}
+
+.row__poster:hover .poster__linkIcon {
+  opacity: 1;
+}

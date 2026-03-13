@@ -1,0 +1,138 @@
+.netflix-row {
+  margin-left: 4%;
+  margin-right: 2%;
+  margin-bottom: 2.5rem;
+  color: white;
+}
+
+.netflix-row-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.row-title-icon {
+  color: #e50914;
+  font-size: 0.8rem;
+}
+
+.netflix-card-row {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 15px 0;
+  gap: 12px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.netflix-card-row::-webkit-scrollbar {
+  display: none;
+}
+
+.netflix-card {
+  min-width: 260px;
+  max-width: 260px;
+  height: 150px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  animation: fadeSlideIn 0.5s ease-out both;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.netflix-card:hover {
+  transform: scale(1.12);
+  z-index: 10;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.7), 0 0 0 2px rgba(255,255,255,0.1);
+}
+
+.netflix-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.netflix-card:hover .netflix-card-img {
+  transform: scale(1.1);
+}
+
+.netflix-card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.95) 0%,
+    rgba(0,0,0,0.4) 40%,
+    transparent 100%
+  );
+  transition: opacity 0.3s;
+}
+
+.netflix-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.netflix-card-icon {
+  color: #e50914;
+  display: flex;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s;
+}
+
+.netflix-card:hover .netflix-card-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.netflix-card-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.netflix-card-number {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.08);
+  z-index: 2;
+  line-height: 1;
+  transition: color 0.3s;
+  font-style: italic;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.06);
+}
+
+.netflix-card:hover .netflix-card-number {
+  color: rgba(229, 9, 20, 0.2);
+  -webkit-text-stroke: 1px rgba(229, 9, 20, 0.15);
+}
