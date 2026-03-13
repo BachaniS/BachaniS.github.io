@@ -35,3 +35,27 @@
   margin-top: -60px;
   padding-bottom: 80px;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  .profile-hero-bg {
+    height: 70vh;
+    min-height: 400px;
+  }
+  .profile-content-rows {
+    margin-top: -30px;
+    padding-bottom: 60px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .profile-hero-bg {
+    height: 60vh;
+    min-height: 350px;
+  }
+  .profile-content-rows {
+    margin-top: -20px;
+    padding-bottom: 40px;
+  }
+}

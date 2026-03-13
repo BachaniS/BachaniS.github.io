@@ -6,13 +6,13 @@ const Projects: React.FC = () => {
   const projects = userData.categories.find(c => c.title === "Trending Projects")?.items || [];
 
   return (
-    <div style={{ padding: '40px', maxWidth: '1200px', margin: '0 auto' }}>
-      <h1 style={{ color: 'white', textAlign: 'center', marginBottom: '40px' }}>Featured Projects</h1>
+    <div style={{ padding: '100px 5% 40px', maxWidth: '1200px', margin: '0 auto' }}>
+      <h1 style={{ color: 'white', textAlign: 'center', marginBottom: '40px', fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>Featured Projects</h1>
       
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
-        gap: '30px'
+        gridTemplateColumns: 'repeat(auto-fill, minmax(min(280px, 100%), 1fr))',
+        gap: '20px'
       }}>
         {projects.map((project) => (
           <div key={project.id} style={{

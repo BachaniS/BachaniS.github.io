@@ -5,8 +5,8 @@ const Skills: React.FC = () => {
   const skillsData = userData.categories.find(c => c.title === "Core Skills")?.items || [];
 
   return (
-    <div style={{ padding: '40px', maxWidth: '1000px', margin: '0 auto', color: 'white' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '50px' }}>Technical Architecture Context</h1>
+    <div style={{ padding: '100px 5% 40px', maxWidth: '1000px', margin: '0 auto', color: 'white' }}>
+      <h1 style={{ textAlign: 'center', marginBottom: '50px', fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>Technical Architecture Context</h1>
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
         {skillsData.map((category) => (
