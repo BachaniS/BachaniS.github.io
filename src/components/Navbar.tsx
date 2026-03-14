@@ -20,6 +20,15 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavigateHome = () => {
+    const activeProfile = localStorage.getItem('activeProfile');
+    if (activeProfile) {
+      navigate(`/profile/${activeProfile}`);
+    } else {
+      navigate('/browse');
+    }
+  };
+
   return (
     <div className={`nav ${show && 'nav__black'}`}>
       <div className="nav__left">
@@ -27,7 +36,7 @@ const Navbar: React.FC = () => {
           {userData.name.split(' ')[0]}
         </div>
         <div className="nav__links_text">
-           <span onClick={() => navigate('/browse')}>Home</span>
+           <span onClick={handleNavigateHome}>Home</span>
            <span onClick={() => navigate('/projects')}>Projects</span>
            <span onClick={() => navigate('/work-experience')}>Experience</span>
         </div>

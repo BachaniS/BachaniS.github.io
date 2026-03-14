@@ -38,6 +38,7 @@ const Browse: React.FC = () => {
   const navigate = useNavigate();
 
   const handleProfileClick = (profile: any) => {
+    localStorage.setItem('activeProfile', profile.id);
     navigate(`/profile/${profile.id}`, { state: { backgroundGif: profile.gif, name: profile.name, color: profile.color } });
   };
 
